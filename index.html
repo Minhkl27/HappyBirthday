@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="shortcurt icon" type="image/png" href="images\balloon.jpg" sizes="32x32">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Lời chào -->
+        <h1>🎉 Chúc Mừng Sinh Nhật! 🎂</h1>
+        <div class="contain_head">
+            <p>Hôm nay là một ngày thật đặc biệt, vì đó là sinh nhật của Phan Phúc! 💖</p>
+
+            <!-- Hình ảnh bánh sinh nhật -->
+            <img src="images\cake.jpg" alt="Bánh sinh nhật" class="cake">
+
+            <!-- Nút nhận bất ngờ -->
+            <button onclick="showSurprise()">Nhấn vào đây để nhận bất ngờ! 🎁</button>
+        </div>
+
+        <!-- Nội dung ẩn -->
+        <div id="surprise" class="hidden">
+            <p>🎈 Chúc chị một tuổi mới tràn đầy niềm vui, sức khỏe và thành công! 🎈</p>
+            <div class="contain_album">
+                <div class="album-container">
+                    <!-- Khung chứa các ảnh -->
+                    <div class="slideshow">
+                        <img src="images\anhtotnghiep.jpg" alt="Ảnh 4" class="slide active">
+                        <img src="images\anh2.jpg" alt="Ảnh 2" class="slide">
+                        <img src="images\anh3.jpg" alt="Ảnh 3" class="slide">
+                        <img src="images\anh4.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh5.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh6.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh7.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh8.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh9.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh10.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh11.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh12.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh13.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh14.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh15.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh16.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh17.jpg" alt="Ảnh 4" class="slide">
+                        <!-- <img src="images\anh18.jpg" alt="Ảnh 4" class="slide"> -->
+                        <img src="images\anh19.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh20.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh21.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh22.jpg" alt="Ảnh 4" class="slide">
+                        <img src="images\anh23.jpg" alt="Ảnh 4" class="slide">
+                        <!-- <img src="images\anh24.jpg" alt="Ảnh 4" class="slide"> -->
+                        <img src="images\anh1.jpg" alt="Ảnh 1" class="slide">
+                        <img src="images\lastyear.jpg" alt="Ảnh 4" class="slide">
+                    </div>
+
+                    <!-- Nút điều khiển -->
+                    <!-- <div class="controls">
+                        <button id="prevBtn">⬅️</button>
+                        <button id="nextBtn">➡️</button>
+                    </div> -->
+                </div>
+            </div>
+            <audio id="birthdaySong"></audio>
+        </div>
+        <div class="balloons-container">
+            <!-- Các bóng bay -->
+            <div class="balloon balloon1"></div>
+            <div class="balloon balloon2"></div>
+            <div class="balloon balloon3"></div>
+            <div class="balloon balloon4"></div>
+            <div class="balloon balloon5"></div>
+        </div>
+        <div class="falling-balloons">
+            <div class="falling-balloon balloon1"></div>
+            <div class="falling-balloon balloon2"></div>
+            <div class="falling-balloon balloon3"></div>
+            <div class="falling-balloon balloon4"></div>
+            <div class="falling-balloon balloon5"></div>
+        </div>
+
+
+        <div class="scrolling-text">
+            <span>Chúc Mừng Sinh Nhật! 🎉 Phan Thị Hồng Phúc! 🌟</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

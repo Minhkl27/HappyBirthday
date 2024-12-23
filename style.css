@@ -1,0 +1,320 @@
+/* Tổng quan */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('images/anhdichoi.jpg');
+    background-size: cover;
+    /* Nền màu hồng nhạt */
+    color: white;
+    /* Màu hồng đậm */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* Hình ảnh */
+.cake,
+.balloons {
+    width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Nút nhấn */
+button {
+    background-color: #d63384;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e83e8c;
+}
+
+/* Nội dung bất ngờ */
+.hidden {
+    display: none;
+}
+
+/* Hiệu ứng chữ chạy */
+.scrolling-text {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: scrollText 10s linear infinite;
+    color: white;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Container cho bóng bay */
+.balloons-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Bóng bay */
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    /* Khởi đầu bên dưới màn hình */
+    width: 80px;
+    height: 120px;
+    background-color: red;
+    /* Màu mặc định */
+    border-radius: 50%;
+    /* Tạo hình tròn */
+    box-shadow: inset -10px -10px rgba(0, 0, 0, 0.1);
+    animation: flyUp 10s linear infinite;
+}
+
+/* Các bóng bay khác màu */
+.balloon1 {
+    left: 10%;
+    background-color: #ff6f61;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    left: 30%;
+    background-color: #fbc02d;
+    animation-duration: 11s;
+    animation-delay: 2s;
+}
+
+.balloon3 {
+    left: 50%;
+    background-color: #8e24aa;
+    animation-duration: 10s;
+    animation-delay: 1s;
+}
+
+.balloon4 {
+    left: 70%;
+    background-color: #039be5;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.balloon5 {
+    left: 90%;
+    background-color: #43a047;
+    animation-duration: 13s;
+    animation-delay: 4s;
+}
+
+/* Hiệu ứng bóng bay lên */
+@keyframes flyUp {
+    0% {
+        transform: translateY(0) scale(1);
+        /* Bắt đầu từ dưới cùng */
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.1);
+        /* Tăng nhẹ kích thước ở giữa */
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(-120%) scale(1);
+        /* Biến mất khỏi màn hình */
+        opacity: 0;
+    }
+}
+
+/* Container cho bóng bay rơi xuống */
+.falling-balloons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Bóng bay rơi */
+.falling-balloon {
+    position: absolute;
+    top: -150px;
+    /* Bắt đầu bên trên màn hình */
+    width: 80px;
+    height: 120px;
+    background-color: red;
+    /* Màu mặc định */
+    border-radius: 50%;
+    /* Tạo hình tròn */
+    box-shadow: inset -10px -10px rgba(0, 0, 0, 0.1);
+    animation: fallDown 10s ease-in infinite;
+}
+
+/* Bóng bay rơi xuống với màu ngẫu nhiên */
+.falling-balloon:nth-child(1) {
+    left: 10%;
+    background-color: #f06292;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.falling-balloon:nth-child(2) {
+    left: 30%;
+    background-color: #ba68c8;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.falling-balloon:nth-child(3) {
+    left: 50%;
+    background-color: #4fc3f7;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+
+.falling-balloon:nth-child(4) {
+    left: 70%;
+    background-color: #81c784;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+
+.falling-balloon:nth-child(5) {
+    left: 90%;
+    background-color: #ffd54f;
+    animation-duration: 10s;
+    animation-delay: 5s;
+}
+
+/* Hiệu ứng bóng bay rơi xuống */
+@keyframes fallDown {
+    0% {
+        transform: translateY(0) scale(1);
+        /* Bắt đầu ở trên */
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50%) scale(1.1);
+        /* Lớn hơn một chút */
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(100%) scale(1);
+        /* Kết thúc ở dưới */
+        opacity: 0;
+    }
+}
+
+.contain_album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 550px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+/* Slideshow */
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Nút điều khiển */
+.controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
